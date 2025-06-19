@@ -1,0 +1,131 @@
+:root {
+  --main-background: rgb(54, 48, 48);
+  --second-background: rgb(69, 86, 125);
+  --header-background: rgb(118, 24, 24);
+  --main-font-color: rgb(188, 182, 182);
+  --second-font-color: rgb(169, 20, 20);
+}
+
+body {
+  color: var(--main-font-color)
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1260px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-right: 40px;
+  padding-left: 40px;
+
+  background-color: var(--header-background);
+}
+
+.list-nav {
+  display: flex;
+  justify-content: end;
+
+  margin: 0;
+  list-style: none;
+}
+
+.link-nav {
+  display: inline-block;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.link-nav:hover,
+.link-nav:focus {
+  background-color: var(--second-background);
+}
+
+.wrapper {
+  margin-top: 63px;
+}
+
+.section {
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: var(--main-background);
+}
+
+.section:nth-child(2n) {
+  background-color: var(--second-background);
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-size: 36px;
+}
+
+.page-title>span {
+  display: block;
+
+  text-align: center;
+  font-size: 26px;
+  font-style: italic;
+  color: var(--second-font-color);
+}
+
+.section-projects {
+  padding-top: 80px;
+}
+
+.title-projects {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 60px;
+
+  border-bottom: 2px solid var(--main-font-color);
+
+  font-size: 36px;
+}
+
+.project-tile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.item-projects {
+  margin: 20px;
+}
