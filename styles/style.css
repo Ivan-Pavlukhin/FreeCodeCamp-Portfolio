@@ -7,6 +7,8 @@
 
   --main-font: "Raleway", sans-serif;
   --font-for-code: "Poppins", sans-serif;
+
+  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -59,14 +61,18 @@ img {
 
 .link-nav {
   display: inline-block;
+
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 0;
   margin-bottom: 0;
+
   font-weight: bold;
   font-size: 20px;
+
+  transition: background-color 300ms var(--animation-timing-function);
 }
 
 .link-nav:hover,
@@ -136,6 +142,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
 
   margin-bottom: 0;
+  padding-left: 0;
 
   list-style: none;
 }
@@ -160,7 +167,9 @@ img {
 
   font-family: var(--font-for-code);
   font-weight: 300;
-  color: orangered
+  color: orangered;
+
+  transition: opacity 300ms var(--animation-timing-function);
 }
 
 .link-project:hover .link-decoration,
@@ -185,17 +194,19 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+
+  min-height: 100vh;
 }
 
 .title-contacts>span {
   display: block;
+
   margin-top: 10px;
 
   text-align: center;
   font-size: 20px;
   font-style: italic;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .list-contacts {
@@ -219,12 +230,17 @@ img {
   position: relative;
   display: flex;
   align-items: center;
+
+  padding: 10px;
+
   font-weight: 700;
   font-size: 20px;
+
+  transition: translate 300ms var(--animation-timing-function);
 }
 
 .link-contact:hover {
-  top: 5px;
+  translate: 0 8px;
 }
 
 .icon-contacts {
@@ -235,4 +251,39 @@ img {
 .icon-contacts {
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-tile {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-tile {
+    display: block;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .title-project {
+    font-size: 10px;
+  }
+
+  /* .title-contacts {
+    margin-bottom: 20px;
+  } */
+
+  .item-contacts {
+    margin: 0;
+  }
+
+  .link-contact {
+    padding: 4px;
+    margin: 0;
+  }
+
+
 }
